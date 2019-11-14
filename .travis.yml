@@ -1,0 +1,9 @@
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t hemakumark/docker-react -f Dockerfile.dev .
+
+scripts
+    - docker run hemakumark/docker-react yarn test -- --coverage
