@@ -6,5 +6,5 @@ services:
 before_install:
     - docker build -t hemakumark/docker-react -f Dockerfile.dev .
 
-scripts:
+script:
     - docker run hemakumark/docker-react yarn test -- --coverage
