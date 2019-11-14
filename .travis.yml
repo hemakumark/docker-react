@@ -7,4 +7,4 @@ before_install:
     - docker build -t hemakumark/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run hemakumark/docker-react yarn test -- --coverage
+    - docker run -e CI=true hemakumark/docker-react yarn test
